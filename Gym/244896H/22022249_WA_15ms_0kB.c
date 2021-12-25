@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main ()
+{
+    int n, i;
+    scanf("%d", &n);
+
+    for(i=0; i<n; i++)
+    {
+        double a, b, c;
+        scanf("%lf %lf %lf", &a, &b, &c);
+
+        if((a+b)!=0)
+        {
+            double r = c/(a+b);
+
+            if(r<=1)
+                printf("Case %d: NO\n", i+1);
+            if(r>1)
+                printf("Case %d: %.0lf\n", i+1, r);
+        }
+    }
+    return 0;
+}
